@@ -39,7 +39,7 @@ public class Bot extends Joueur {
     }
 
     public Coordonnee choisirAttaque() throws InterruptedException {
-        java.lang.Thread.sleep(0);
+        java.lang.Thread.sleep(100);
         Random r = new Random();
         Coordonnee c;
         int [] nextMove;

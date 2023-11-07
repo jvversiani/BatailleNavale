@@ -11,16 +11,14 @@ import javax.swing.*;
 
 
 public class GameController {
-    private static JFrame mainFrame;
     private static JPanel cardPanel;
     private static CardLayout cardLayout;
     private static StartScreen startScreen;
     private JPanel panelBatailleNavale;
-    private HowToPlayScreen howToPlay;
     private BatailleNavale batailleNavale;
 
     public GameController() throws InterruptedException {
-        mainFrame = new JFrame("Bataille Navale");
+        JFrame mainFrame = new JFrame("Bataille Navale");
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -29,7 +27,7 @@ public class GameController {
 
         startScreen = new StartScreen();
         cardPanel.add(startScreen.getMainPanel(), "startScreen");
-        howToPlay = new HowToPlayScreen();
+        HowToPlayScreen howToPlay = new HowToPlayScreen();
         cardPanel.add(howToPlay.getMainPanel(), "howToPlayScreen");
         batailleNavale = new BatailleNavale();
 
@@ -109,3 +107,4 @@ public class GameController {
         });
     }
 }
+
